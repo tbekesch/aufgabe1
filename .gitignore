@@ -1,0 +1,13 @@
+# Java-spezifisch
+*.class
+bin/
+out/
+
+# IDE-spezifisch (VS Code / Eclipse)
+.settings/
+.classpath
+.project
+.vscode/
+
+# System-Dateien (Mac)
+.DS_Store
