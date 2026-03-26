@@ -1,14 +1,17 @@
-public class vorlesungsstunde {
+
+public class praktikumsstunde {
     private String thema;
     private String datum;
     private String uhrzeit;
     private String raum;
+    private String[] aufgaben;
 
-    public vorlesungsstunde(String thema, String datum, String uhrzeit, String raum) {
+    public praktikumsstunde(String thema, String datum, String uhrzeit, String raum, String[] aufgaben) {
         this.thema = thema;
         this.datum = datum;
         this.uhrzeit = uhrzeit;
         this.raum = raum;
+        this.aufgaben = aufgaben;
     }
 
         public String getThema() {
@@ -27,10 +30,18 @@ public class vorlesungsstunde {
             return raum;
         } 
 
+        public String[] getAufgaben() {
+            return aufgaben;
+        }
+
     public void DetailsAnzeigen() {
         System.out.println("Thema: " + this.thema);
         System.out.println("Datum: " + this.datum);
         System.out.println("Uhrzeit: " + this.uhrzeit);
         System.out.println("Raum: " + this.raum);
-    }   
+        System.out.println("Aufgaben:");
+        for (String aufgabe : this.aufgaben) {
+            System.out.println("- " + aufgabe);
+        }
+    }
 }
